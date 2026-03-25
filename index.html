@@ -8,25 +8,22 @@
 <meta property="og:description" content="Turn your bio into a business. Built for creators. White-label ready for agencies.">
 <meta property="og:image" content="https://letsforge.me/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<title>Forge — Let's Forge.</title>  
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&family=Space+Mono:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap');
-</style>
+<title>Forge — Let's Forge.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Space+Mono:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --black:#080808;--carbon:#0F0F0F;--iron:#181818;--steel:#222222;
-  --border:rgba(255,255,255,0.07);--ash:#555555;--smoke:#999999;
-  --cream:#F2EDE8;--ember:#E85D04;--flame:#F48C06;--gold:#FAA307;
-  --font-display:'Bebas Neue',sans-serif;
-  --font-body:'DM Sans',sans-serif;
-  --font-mono:'Space Mono',monospace;
-  --font-arabic:'Noto Naskh Arabic',serif;
+  --black: #080808;--carbon: #0F0F0F;--iron: #181818;--steel: #222222;
+  --border: rgba(255,255,255,0.07);--ash: #555555;--smoke: #999999;
+  --cream: #F2EDE8;--ember: #E85D04;--flame: #F48C06;--gold: #FAA307;
+  --font-display: 'Bebas Neue',sans-serif;
+  --font-body: 'DM Sans',sans-serif;
+  --font-mono: 'Space Mono',monospace;
+  --font-arabic: 'Noto Naskh Arabic',serif;
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:var(--black);color:var(--cream);font-family:var(--font-body);font-weight:300;overflow-x:hidden;}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--cream); font-family: var(--font-body); font-weight: 300; overflow-x: hidden; }
 html[lang="ar"] body{font-family:var(--font-arabic);}
 html[lang="ar"] .hero-headline{font-family:var(--font-arabic);font-size:clamp(52px,8vw,120px);font-weight:600;line-height:1.2;}
 html[lang="ar"] .section-title{font-family:var(--font-arabic);font-weight:600;line-height:1.2;}
@@ -184,13 +181,13 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;align-i
 .footer-links a:hover{color:var(--smoke);}
 /* RESPONSIVE */
 @media(max-width:900px){
-  .nav{padding:16px 24px;}.nav.scrolled{padding:12px 24px;}.nav-links{display:none;}
-  .hero{padding:100px 24px 60px;}.waitlist-form{flex-direction:column;}
-  .section-problem,.section-features,.section-compare,.section-pricing,.section-cta{padding:80px 24px;}
-  .section-wl{padding:80px 24px;}.problem-grid,.features-grid,.pricing-grid{grid-template-columns:1fr;}
-  .wl-inner{grid-template-columns:1fr;}.wl-visual{display:none;}
-  footer{flex-direction:column;gap:20px;text-align:center;}.footer-links{flex-wrap:wrap;justify-content:center;}
-  *,*::before,*::after{cursor:auto!important;}.cursor,.cursor-ring{display:none;}
+  .nav{padding:16px 24px;}.nav.scrolled{padding:12px 24px;}.nav-links{display:none;}
+  .hero{padding:100px 24px 60px;}.waitlist-form{flex-direction:column;}
+  .section-problem,.section-features,.section-compare,.section-pricing,.section-cta{padding:80px 24px;}
+  .section-wl{padding:80px 24px;}.problem-grid,.features-grid,.pricing-grid{grid-template-columns:1fr;}
+  .wl-inner{grid-template-columns:1fr;}.wl-visual{display:none;}
+  footer{flex-direction:column;gap:20px;text-align:center;}.footer-links{flex-wrap:wrap;justify-content:center;}
+  *,*::before,*::after{cursor:auto!important;}.cursor,.cursor-ring{display:none;}
 }
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
@@ -202,405 +199,405 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;align-i
 
 <!-- NAVBAR -->
 <nav class="nav" id="nav">
-  <a href="#" class="nav-logo">
-    <svg class="nav-hex" viewBox="0 0 26 26" fill="none">
-      <polygon points="13,1 25,7 25,19 13,25 1,19 1,7" fill="#E85D04"/>
-      <text x="13" y="18" font-family="Bebas Neue" font-size="10" fill="#080808" text-anchor="middle" letter-spacing="1">F</text>
-    </svg>
-    FORGE
-  </a>
-  <ul class="nav-links">
-    <li><a href="#features" data-i18n="navFeatures">Features</a></li>
-    <li><a href="#agencies" data-i18n="navAgencies">Agencies</a></li>
-    <li><a href="#pricing" data-i18n="navPricing">Pricing</a></li>
-  </ul>
-  <div class="lang-toggle">
-    <button class="lang-btn active" onclick="switchLang('en')">EN</button>
-    <button class="lang-btn" onclick="switchLang('fr')">FR</button>
-    <button class="lang-btn" onclick="switchLang('ar')">ع</button>
-  </div>
-  <a href="#waitlist" class="nav-cta" data-i18n="navCta">Join waitlist →</a>
+  <a href="#" class="nav-logo">
+    <svg class="nav-hex" viewBox="0 0 26 26" fill="none">
+      <polygon points="13,1 25,7 25,19 13,25 1,19 1,7" fill="#E85D04"/>
+      <text x="13" y="18" font-family="Bebas Neue" font-size="10" fill="#080808" text-anchor="middle" letter-spacing="1">F</text>
+    </svg>
+    FORGE
+  </a>
+  <ul class="nav-links">
+    <li><a href="#features" data-i18n="navFeatures">Features</a></li>
+    <li><a href="#agencies" data-i18n="navAgencies">Agencies</a></li>
+    <li><a href="#pricing" data-i18n="navPricing">Pricing</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+    <button class="lang-btn" onclick="switchLang('fr')">FR</button>
+    <button class="lang-btn" onclick="switchLang('ar')">ع</button>
+  </div>
+  <a href="#waitlist" class="nav-cta" data-i18n="navCta">Join waitlist →</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="waitlist">
-  <div class="hero-ghost">FORGE</div>
-  <div class="hero-lines"><div class="h-line"></div><div class="h-line"></div><div class="h-line"></div></div>
-  <div class="hero-badge">
-    <div class="badge-dot"></div>
-    <span data-i18n="badge">Now accepting early access</span>
-  </div>
-  <h1 class="hero-headline">
-    <span class="line-1" data-i18n="h1">TURN YOUR</span>
-    <span class="line-2" data-i18n="h2">BIO INTO</span>
-    <span class="line-3" data-i18n="h3">BUSINESS.</span>
-  </h1>
-  <p class="hero-sub" data-i18n="sub">The link-in-bio platform built for creators who sell — and agencies who need white-label tools that actually work. No redirects. Real revenue.</p>
-  <div class="waitlist-form">
-    <input class="waitlist-input" type="email" placeholder="your@email.com" id="emailInput" data-i18n-placeholder="placeholder">
-    <button class="waitlist-btn" id="waitlistBtn" onclick="submitWaitlist()">
-      <span data-i18n="cta">Let's Forge →</span>
-    </button>
-  </div>
-  <div class="waitlist-note" data-i18n="note">Free forever plan · No credit card · Launch early 2026</div>
-  <div class="waitlist-counter">
-    <div class="counter-avatars">
-      <div class="counter-avatar" style="background:linear-gradient(135deg,#E85D04,#FAA307);">SK</div>
-      <div class="counter-avatar" style="background:linear-gradient(135deg,#38BDF8,#60A5FA);">YA</div>
-      <div class="counter-avatar" style="background:linear-gradient(135deg,#A78BFA,#7C3AED);">LB</div>
-      <div class="counter-avatar" style="background:linear-gradient(135deg,#4ADE80,#16A34A);">KF</div>
-    </div>
-    <div class="counter-text"><strong id="waitlistCount">247</strong> <span data-i18n="counter">creators already on the list</span></div>
-  </div>
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
-    <div class="scroll-label" data-i18n="scroll">Scroll</div>
-  </div>
+  <div class="hero-ghost">FORGE</div>
+  <div class="hero-lines"><div class="h-line"></div><div class="h-line"></div><div class="h-line"></div></div>
+  <div class="hero-badge">
+    <div class="badge-dot"></div>
+    <span data-i18n="badge">Now accepting early access</span>
+  </div>
+  <h1 class="hero-headline">
+    <span class="line-1" data-i18n="h1">TURN YOUR</span>
+    <span class="line-2" data-i18n="h2">BIO INTO</span>
+    <span class="line-3" data-i18n="h3">BUSINESS.</span>
+  </h1>
+  <p class="hero-sub" data-i18n="sub">The link-in-bio platform built for creators who sell — and agencies who need white-label tools that actually work. No redirects. Real revenue.</p>
+  <div class="waitlist-form">
+    <input class="waitlist-input" type="email" placeholder="your@email.com" id="emailInput" data-i18n-placeholder="placeholder">
+    <button class="waitlist-btn" id="waitlistBtn" onclick="submitWaitlist()">
+      <span data-i18n="cta">Let's Forge →</span>
+    </button>
+  </div>
+  <div class="waitlist-note" data-i18n="note">Free forever plan · No credit card · Launch early 2025</div>
+  <div class="waitlist-counter">
+    <div class="counter-avatars">
+      <div class="counter-avatar" style="background:linear-gradient(135deg,#E85D04,#FAA307);">SK</div>
+      <div class="counter-avatar" style="background:linear-gradient(135deg,#38BDF8,#60A5FA);">YA</div>
+      <div class="counter-avatar" style="background:linear-gradient(135deg,#A78BFA,#7C3AED);">LB</div>
+      <div class="counter-avatar" style="background:linear-gradient(135deg,#4ADE80,#16A34A);">KF</div>
+    </div>
+    <div class="counter-text"><strong id="waitlistCount">247</strong> <span data-i18n="counter">creators already on the list</span></div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <div class="scroll-label" data-i18n="scroll">Scroll</div>
+  </div>
 </section>
 
 <!-- PROBLEM -->
 <section class="section-problem reveal">
-  <div class="section-eyebrow" data-i18n="problemEyebrow">The problem</div>
-  <div class="problem-grid">
-    <div class="problem-card">
-      <span class="problem-icon">🔗</span>
-      <div class="problem-title" data-i18n="problem1Title">LINKTREE REDIRECTS.
+  <div class="section-eyebrow" data-i18n="problemEyebrow">The problem</div>
+  <div class="problem-grid">
+    <div class="problem-card">
+      <span class="problem-icon">🔗</span>
+      <div class="problem-title" data-i18n="problem1Title">LINKTREE REDIRECTS.
 IT DOESN'T CONVERT.</div>
-      <div class="problem-desc" data-i18n="problem1Desc">You send 10,000 people to your Linktree. They click a link and disappear. You have no idea who they were, where they came from, or why they left without buying.</div>
-    </div>
-    <div class="problem-card">
-      <span class="problem-icon">🏢</span>
-      <div class="problem-title" data-i18n="problem2Title">AGENCIES HAVE NO
+      <div class="problem-desc" data-i18n="problem1Desc">You send 10,000 people to your Linktree. They click a link and disappear. You have no idea who they were, where they came from, or why they left without buying.</div>
+    </div>
+    <div class="problem-card">
+      <span class="problem-icon">🏢</span>
+      <div class="problem-title" data-i18n="problem2Title">AGENCIES HAVE NO
 UNIFIED TOOL.</div>
-      <div class="problem-desc" data-i18n="problem2Desc">You manage 30 creators across 6 different platforms. No unified dashboard. No white-label. Your clients see "Linktree" branding — not yours.</div>
-    </div>
-  </div>
+      <div class="problem-desc" data-i18n="problem2Desc">You manage 30 creators across 6 different platforms. No unified dashboard. No white-label. Your clients see "Linktree" branding — not yours.</div>
+    </div>
+  </div>
 </section>
 
 <!-- FEATURES -->
 <section class="section-features" id="features">
-  <div class="features-inner">
-    <div class="section-eyebrow reveal" data-i18n="featuresEyebrow">What Forge does differently</div>
-    <div class="section-title reveal">
-      <span data-i18n="featuresTitle1">BUILT TO</span><br>
-      <span class="ember" data-i18n="featuresTitle2">SELL,</span><br>
-      <span data-i18n="featuresTitle3">NOT SHARE.</span>
-    </div>
-    <div class="features-grid reveal">
-      <div class="feature-item">
-        <span class="feature-num">01</span>
-        <div class="feature-title" data-i18n="f1Title">NATIVE STOREFRONT</div>
-        <div class="feature-desc" data-i18n="f1Desc">Sell digital products, presets, templates, and guides directly from your page. No third-party store needed. Payments go straight to you.</div>
-      </div>
-      <div class="feature-item">
-        <span class="feature-num">02</span>
-        <div class="feature-title" data-i18n="f2Title">ACTIONABLE ANALYTICS</div>
-        <div class="feature-desc" data-i18n="f2Desc">Not just click counts. Know where your visitors come from, which links convert to revenue, and what to optimize next. Data that drives decisions.</div>
-      </div>
-      <div class="feature-item">
-        <span class="feature-num">03</span>
-        <div class="feature-title" data-i18n="f3Title">BOOKING INTEGRATION</div>
-        <div class="feature-desc" data-i18n="f3Desc">Let visitors book a call, a session, or a consultation directly from your page. No back-and-forth DMs. Calendar synced. Payment collected.</div>
-      </div>
-      <div class="feature-item">
-        <span class="feature-num">04</span>
-        <div class="feature-title" data-i18n="f4Title">EMAIL CAPTURE</div>
-        <div class="feature-desc" data-i18n="f4Desc">Build your list without leaving the page. Every visitor is a potential subscriber. Your audience, owned by you — not rented from Instagram.</div>
-      </div>
-      <div class="feature-item">
-        <span class="feature-num">05</span>
-        <div class="feature-title" data-i18n="f5Title">MULTI-CURRENCY PAYMENTS</div>
-        <div class="feature-desc" data-i18n="f5Desc">Stripe for the West. Paystack for Africa. Local payment rails for emerging markets. The first link-in-bio platform that actually works everywhere.</div>
-      </div>
-      <div class="feature-item">
-        <span class="feature-num">06</span>
-        <div class="feature-title" data-i18n="f6Title">WHITE-LABEL READY</div>
-        <div class="feature-desc" data-i18n="f6Desc">Agencies: rebrand the entire platform as your own. Your logo, your domain, your colors. Your creators see your brand — not ours. Full admin dashboard included.</div>
-      </div>
-    </div>
-  </div>
+  <div class="features-inner">
+    <div class="section-eyebrow reveal" data-i18n="featuresEyebrow">What Forge does differently</div>
+    <div class="section-title reveal">
+      <span data-i18n="featuresTitle1">BUILT TO</span><br>
+      <span class="ember" data-i18n="featuresTitle2">SELL,</span><br>
+      <span data-i18n="featuresTitle3">NOT SHARE.</span>
+    </div>
+    <div class="features-grid reveal">
+      <div class="feature-item">
+        <span class="feature-num">01</span>
+        <div class="feature-title" data-i18n="f1Title">NATIVE STOREFRONT</div>
+        <div class="feature-desc" data-i18n="f1Desc">Sell digital products, presets, templates, and guides directly from your page. No third-party store needed. Payments go straight to you.</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-num">02</span>
+        <div class="feature-title" data-i18n="f2Title">ACTIONABLE ANALYTICS</div>
+        <div class="feature-desc" data-i18n="f2Desc">Not just click counts. Know where your visitors come from, which links convert to revenue, and what to optimize next. Data that drives decisions.</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-num">03</span>
+        <div class="feature-title" data-i18n="f3Title">BOOKING INTEGRATION</div>
+        <div class="feature-desc" data-i18n="f3Desc">Let visitors book a call, a session, or a consultation directly from your page. No back-and-forth DMs. Calendar synced. Payment collected.</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-num">04</span>
+        <div class="feature-title" data-i18n="f4Title">EMAIL CAPTURE</div>
+        <div class="feature-desc" data-i18n="f4Desc">Build your list without leaving the page. Every visitor is a potential subscriber. Your audience, owned by you — not rented from Instagram.</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-num">05</span>
+        <div class="feature-title" data-i18n="f5Title">MULTI-CURRENCY PAYMENTS</div>
+        <div class="feature-desc" data-i18n="f5Desc">Stripe for the West. Paystack for Africa. Local payment rails for emerging markets. The first link-in-bio platform that actually works everywhere.</div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-num">06</span>
+        <div class="feature-title" data-i18n="f6Title">WHITE-LABEL READY</div>
+        <div class="feature-desc" data-i18n="f6Desc">Agencies: rebrand the entire platform as your own. Your logo, your domain, your colors. Your creators see your brand — not ours. Full admin dashboard included.</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- COMPARISON -->
 <section class="section-compare">
-  <div class="section-eyebrow reveal" data-i18n="compareEyebrow">The honest comparison</div>
-  <div class="section-title reveal" style="font-size:clamp(42px,6vw,80px);">
-    <span data-i18n="compareTitle1">FORGE VS</span><br>
-    <span class="ember" data-i18n="compareTitle2">EVERYONE.</span>
-  </div>
-  <table class="compare-table reveal">
-    <thead>
-      <tr>
-        <th data-i18n="compareFeature">Feature</th>
-        <th class="forge-col">⬡ Forge</th>
-        <th>Linktree</th><th>Beacons</th><th>Stan</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td data-i18n="cmp1">Link-in-bio page</td><td class="forge-col"><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td data-i18n="cmp2">Sell digital products</td><td class="forge-col"><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
-      <tr><td data-i18n="cmp3">Booking integration</td><td class="forge-col"><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="partial">~</span></td><td><span class="cross">✗</span></td></tr>
-      <tr><td data-i18n="cmp4">Email capture built-in</td><td class="forge-col"><span class="check">✓</span></td><td><span class="partial">~</span></td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td></tr>
-      <tr><td data-i18n="cmp5">Multi-currency payments</td><td class="forge-col"><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
-      <tr><td data-i18n="cmp6">White-label for agencies</td><td class="forge-col"><span class="check">✓</span></td><td><span class="partial">~</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
-      <tr><td data-i18n="cmp7">Agency portfolio dashboard</td><td class="forge-col"><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
-      <tr><td data-i18n="cmp8">Actionable analytics</td><td class="forge-col"><span class="check">✓</span></td><td><span class="partial">~</span></td><td><span class="partial">~</span></td><td><span class="cross">✗</span></td></tr>
-    </tbody>
-  </table>
+  <div class="section-eyebrow reveal" data-i18n="compareEyebrow">The honest comparison</div>
+  <div class="section-title reveal" style="font-size:clamp(42px,6vw,80px);">
+    <span data-i18n="compareTitle1">FORGE VS</span><br>
+    <span class="ember" data-i18n="compareTitle2">EVERYONE.</span>
+  </div>
+  <table class="compare-table reveal">
+    <thead>
+      <tr>
+        <th data-i18n="compareFeature">Feature</th>
+        <th class="forge-col">⬡ Forge</th>
+        <th>Linktree</th><th>Beacons</th><th>Stan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td data-i18n="cmp1">Link-in-bio page</td><td class="forge-col"><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+      <tr><td data-i18n="cmp2">Sell digital products</td><td class="forge-col"><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+      <tr><td data-i18n="cmp3">Booking integration</td><td class="forge-col"><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="partial">~</span></td><td><span class="cross">✗</span></td></tr>
+      <tr><td data-i18n="cmp4">Email capture built-in</td><td class="forge-col"><span class="check">✓</span></td><td><span class="partial">~</span></td><td><span class="check">✓</span></td><td><span class="cross">✗</span></td></tr>
+      <tr><td data-i18n="cmp5">Multi-currency payments</td><td class="forge-col"><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
+      <tr><td data-i18n="cmp6">White-label for agencies</td><td class="forge-col"><span class="check">✓</span></td><td><span class="partial">~</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
+      <tr><td data-i18n="cmp7">Agency portfolio dashboard</td><td class="forge-col"><span class="check">✓</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td><td><span class="cross">✗</span></td></tr>
+      <tr><td data-i18n="cmp8">Actionable analytics</td><td class="forge-col"><span class="check">✓</span></td><td><span class="partial">~</span></td><td><span class="partial">~</span></td><td><span class="cross">✗</span></td></tr>
+    </tbody>
+  </table>
 </section>
 
 <!-- WHITE-LABEL -->
 <section class="section-wl" id="agencies">
-  <div class="wl-inner">
-    <div class="wl-content reveal">
-      <div class="section-eyebrow" data-i18n="agenciesEyebrow">For agencies</div>
-      <div class="section-title">
-        <span data-i18n="wlTitle1">YOUR</span><br>
-        <span data-i18n="wlTitle2">BRAND.</span><br>
-        <span class="ember" data-i18n="wlTitle3">NOT OURS.</span>
-      </div>
-      <p class="wl-desc" data-i18n="wlDesc">Launch a fully branded link-in-bio platform for your creators in less than 24 hours. Your logo, your domain, your colors. Manage your entire portfolio from one dashboard.</p>
-      <div class="wl-points">
-        <div class="wl-point"><div class="wl-point-dot"></div><span data-i18n="wlP1">Custom domain — creators see your brand, not Forge</span></div>
-        <div class="wl-point"><div class="wl-point-dot"></div><span data-i18n="wlP2">3 management modes — Invite, Managed, Co-managed</span></div>
-        <div class="wl-point"><div class="wl-point-dot"></div><span data-i18n="wlP3">Portfolio analytics — see every creator's performance at once</span></div>
-        <div class="wl-point"><div class="wl-point-dot"></div><span data-i18n="wlP4">Revenue split — charge your creators what you want</span></div>
-        <div class="wl-point"><div class="wl-point-dot"></div><span data-i18n="wlP5">Starting at $79/month for up to 20 creators</span></div>
-      </div>
-    </div>
-    <div class="wl-visual reveal">
-      <div class="agency-card"><div class="agency-card-name">CREATORHUB</div><div class="agency-card-sub">By NovaTalent Agency</div><div class="agency-card-domain">creatorhub.io</div><div class="agency-powered">Powered by Forge</div></div>
-      <div class="agency-card"><div class="agency-card-name">LINKGREEN</div><div class="agency-card-sub">By EcoCreators Africa</div><div class="agency-card-domain">linkgreen.co</div><div class="agency-powered">Powered by Forge</div></div>
-      <div class="agency-card"><div class="agency-card-name">STARLINK</div><div class="agency-card-sub">By Lumière Talent</div><div class="agency-card-domain">starlink.me</div><div class="agency-powered">Powered by Forge</div></div>
-    </div>
-  </div>
+  <div class="wl-inner">
+    <div class="wl-content reveal">
+      <div class="section-eyebrow" data-i18n="agenciesEyebrow">For agencies</div>
+      <div class="section-title">
+        <span data-i18n="wlTitle1">YOUR</span><br>
+        <span data-i18n="wlTitle2">BRAND.</span><br>
+        <span class="ember" data-i18n="wlTitle3">NOT OURS.</span>
+      </div>
+      <p class="wl-desc" data-i18n="wlDesc">Launch a fully branded link-in-bio platform for your creators in less than 24 hours. Your logo, your domain, your colors. Manage your entire portfolio from one dashboard.</p>
+      <div class="wl-points">
+        <div class="wl-point"><div class="wl-point-dot"></div><span data-i18n="wlP1">Custom domain — creators see your brand, not Forge</span></div>
+        <div class="wl-point"><div class="wl-point-dot"></div><span data-i18n="wlP2">3 management modes — Invite, Managed, Co-managed</span></div>
+        <div class="wl-point"><div class="wl-point-dot"></div><span data-i18n="wlP3">Portfolio analytics — see every creator's performance at once</span></div>
+        <div class="wl-point"><div class="wl-point-dot"></div><span data-i18n="wlP4">Revenue split — charge your creators what you want</span></div>
+        <div class="wl-point"><div class="wl-point-dot"></div><span data-i18n="wlP5">Starting at $79/month for up to 20 creators</span></div>
+      </div>
+    </div>
+    <div class="wl-visual reveal">
+      <div class="agency-card"><div class="agency-card-name">CREATORHUB</div><div class="agency-card-sub">By NovaTalent Agency</div><div class="agency-card-domain">creatorhub.io</div><div class="agency-powered">Powered by Forge</div></div>
+      <div class="agency-card"><div class="agency-card-name">LINKGREEN</div><div class="agency-card-sub">By EcoCreators Africa</div><div class="agency-card-domain">linkgreen.co</div><div class="agency-powered">Powered by Forge</div></div>
+      <div class="agency-card"><div class="agency-card-name">STARLINK</div><div class="agency-card-sub">By Lumière Talent</div><div class="agency-card-domain">starlink.me</div><div class="agency-powered">Powered by Forge</div></div>
+    </div>
+  </div>
 </section>
 
 <!-- PRICING -->
 <section class="section-pricing" id="pricing">
-  <div class="section-eyebrow reveal" data-i18n="pricingEyebrow">Simple pricing</div>
-  <div class="section-title reveal">
-    <span data-i18n="pricingTitle1">PAY FOR</span><br>
-    <span class="ember" data-i18n="pricingTitle2">RESULTS,</span><br>
-    <span data-i18n="pricingTitle3">NOT LINKS.</span>
-  </div>
-  <div class="pricing-grid reveal">
-    <div class="pricing-card">
-      <div class="pricing-plan" data-i18n="plan1Name">Free</div>
-      <div class="pricing-price">$0</div>
-      <div class="pricing-period" data-i18n="plan1Period">forever</div>
-      <ul class="pricing-features">
-        <li data-i18n="plan1F1">5 links</li>
-        <li data-i18n="plan1F2">Basic analytics</li>
-        <li data-i18n="plan1F3">QR code</li>
-        <li>letsforge.me/yourname</li>
-      </ul>
-      <a href="#waitlist" class="pricing-cta" data-i18n="plan1Cta">Get started free</a>
-    </div>
-    <div class="pricing-card featured">
-      <div class="pricing-plan" data-i18n="plan2Name">Creator Pro</div>
-      <div class="pricing-price">$19</div>
-      <div class="pricing-period" data-i18n="plan2Period">/ month</div>
-      <ul class="pricing-features">
-        <li data-i18n="plan2F1">Unlimited links</li>
-        <li data-i18n="plan2F2">Sell digital products</li>
-        <li data-i18n="plan2F3">Booking integration</li>
-        <li data-i18n="plan2F4">Email capture</li>
-        <li data-i18n="plan2F5">Advanced analytics</li>
-        <li data-i18n="plan2F6">Custom domain</li>
-      </ul>
-      <a href="#waitlist" class="pricing-cta" data-i18n="plan2Cta">Join waitlist →</a>
-    </div>
-    <div class="pricing-card">
-      <div class="pricing-plan" data-i18n="plan3Name">Agency</div>
-      <div class="pricing-price">$79</div>
-      <div class="pricing-period" data-i18n="plan3Period">/ month · up to 20 creators</div>
-      <ul class="pricing-features">
-        <li data-i18n="plan3F1">Everything in Creator Pro</li>
-        <li data-i18n="plan3F2">Full white-label</li>
-        <li data-i18n="plan3F3">Custom domain</li>
-        <li data-i18n="plan3F4">Portfolio dashboard</li>
-        <li data-i18n="plan3F5">3 management modes</li>
-        <li data-i18n="plan3F6">Priority support</li>
-      </ul>
-      <a href="#waitlist" class="pricing-cta" data-i18n="plan3Cta">Contact us →</a>
-    </div>
-  </div>
+  <div class="section-eyebrow reveal" data-i18n="pricingEyebrow">Simple pricing</div>
+  <div class="section-title reveal">
+    <span data-i18n="pricingTitle1">PAY FOR</span><br>
+    <span class="ember" data-i18n="pricingTitle2">RESULTS,</span><br>
+    <span data-i18n="pricingTitle3">NOT LINKS.</span>
+  </div>
+  <div class="pricing-grid reveal">
+    <div class="pricing-card">
+      <div class="pricing-plan" data-i18n="plan1Name">Free</div>
+      <div class="pricing-price">$0</div>
+      <div class="pricing-period" data-i18n="plan1Period">forever</div>
+      <ul class="pricing-features">
+        <li data-i18n="plan1F1">5 links</li>
+        <li data-i18n="plan1F2">Basic analytics</li>
+        <li data-i18n="plan1F3">QR code</li>
+        <li>letsforge.me/yourname</li>
+      </ul>
+      <a href="#waitlist" class="pricing-cta" data-i18n="plan1Cta">Get started free</a>
+    </div>
+    <div class="pricing-card featured">
+      <div class="pricing-plan" data-i18n="plan2Name">Creator Pro</div>
+      <div class="pricing-price">$19</div>
+      <div class="pricing-period" data-i18n="plan2Period">/ month</div>
+      <ul class="pricing-features">
+        <li data-i18n="plan2F1">Unlimited links</li>
+        <li data-i18n="plan2F2">Sell digital products</li>
+        <li data-i18n="plan2F3">Booking integration</li>
+        <li data-i18n="plan2F4">Email capture</li>
+        <li data-i18n="plan2F5">Advanced analytics</li>
+        <li data-i18n="plan2F6">Custom domain</li>
+      </ul>
+      <a href="#waitlist" class="pricing-cta" data-i18n="plan2Cta">Join waitlist →</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-plan" data-i18n="plan3Name">Agency</div>
+      <div class="pricing-price">$79</div>
+      <div class="pricing-period" data-i18n="plan3Period">/ month · up to 20 creators</div>
+      <ul class="pricing-features">
+        <li data-i18n="plan3F1">Everything in Creator Pro</li>
+        <li data-i18n="plan3F2">Full white-label</li>
+        <li data-i18n="plan3F3">Custom domain</li>
+        <li data-i18n="plan3F4">Portfolio dashboard</li>
+        <li data-i18n="plan3F5">3 management modes</li>
+        <li data-i18n="plan3F6">Priority support</li>
+      </ul>
+      <a href="#waitlist" class="pricing-cta" data-i18n="plan3Cta">Contact us →</a>
+    </div>
+  </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="section-cta">
-  <div class="cta-title reveal">
-    <span data-i18n="ctaTitle1">READY TO</span><br>
-    <span class="line-ember" data-i18n="ctaTitle2">FORGE</span><br>
-    <span data-i18n="ctaTitle3">YOURS ?</span>
-  </div>
-  <div class="cta-form reveal">
-    <input class="waitlist-input" type="email" placeholder="your@email.com" id="emailInput2" data-i18n-placeholder="placeholder">
-    <button class="waitlist-btn" id="waitlistBtn2" onclick="submitWaitlist2()">
-      <span data-i18n="cta">Let's Forge →</span>
-    </button>
-  </div>
-  <div class="waitlist-note reveal">
-    <span data-i18n="ctaNote1">Join</span> <strong id="waitlistCount2" style="color:var(--smoke);">247</strong> <span data-i18n="ctaNote2">creators on the waitlist · Free forever plan available</span>
-  </div>
+  <div class="cta-title reveal">
+    <span data-i18n="ctaTitle1">READY TO</span><br>
+    <span class="line-ember" data-i18n="ctaTitle2">FORGE</span><br>
+    <span data-i18n="ctaTitle3">YOURS ?</span>
+  </div>
+  <div class="cta-form reveal">
+    <input class="waitlist-input" type="email" placeholder="your@email.com" id="emailInput2" data-i18n-placeholder="placeholder">
+    <button class="waitlist-btn" id="waitlistBtn2" onclick="submitWaitlist2()">
+      <span data-i18n="cta">Let's Forge →</span>
+    </button>
+  </div>
+  <div class="waitlist-note reveal">
+    <span data-i18n="ctaNote1">Join</span> <strong id="waitlistCount2" style="color:var(--smoke);">247</strong> <span data-i18n="ctaNote2">creators on the waitlist · Free forever plan available</span>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <a href="#" class="footer-logo">
-    <svg width="20" height="20" viewBox="0 0 26 26" fill="none">
-      <polygon points="13,1 25,7 25,19 13,25 1,19 1,7" fill="#E85D04"/>
-      <text x="13" y="18" font-family="Bebas Neue" font-size="10" fill="#080808" text-anchor="middle" letter-spacing="1">F</text>
-    </svg>
-    FORGE
-  </a>
-  <div class="footer-copy">© 2026 Forge · letsforge.me</div>
-  <div class="footer-links">
-    <a href="#" data-i18n="footerPrivacy">Privacy</a>
-    <a href="#" data-i18n="footerTerms">Terms</a>
-    <a href="mailto:hello@letsforge.me">Contact</a>
-    <a href="#">Twitter</a>
-  </div>
+  <a href="#" class="footer-logo">
+    <svg width="20" height="20" viewBox="0 0 26 26" fill="none">
+      <polygon points="13,1 25,7 25,19 13,25 1,19 1,7" fill="#E85D04"/>
+      <text x="13" y="18" font-family="Bebas Neue" font-size="10" fill="#080808" text-anchor="middle" letter-spacing="1">F</text>
+    </svg>
+    FORGE
+  </a>
+  <div class="footer-copy">© 2026 Forge · letsforge.me</div>
+  <div class="footer-links">
+    <a href="#" data-i18n="footerPrivacy">Privacy</a>
+    <a href="#" data-i18n="footerTerms">Terms</a>
+    <a href="/cdn-cgi/l/email-protection#c5ada0a9a9aa85a9a0b1b6a3aab7a2a0eba8a0">Contact</a>
+    <a href="#">Twitter</a>
+  </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const translations = {
-  en: {
-    badge:"Now accepting early access",h1:"TURN YOUR",h2:"BIO INTO",h3:"BUSINESS.",
-    sub:"The link-in-bio platform built for creators who sell — and agencies who need white-label tools that actually work. No redirects. Real revenue.",
-    cta:"Let's Forge →",note:"Free forever plan · No credit card · Launch early 2026",
-    navCta:"Join waitlist →",navFeatures:"Features",navAgencies:"Agencies",navPricing:"Pricing",
-    counter:"creators already on the list",scroll:"Scroll",
-    problemEyebrow:"The problem",
-    problem1Title:"LINKTREE REDIRECTS.\nIT DOESN'T CONVERT.",
-    problem1Desc:"You send 10,000 people to your Linktree. They click a link and disappear. You have no idea who they were, where they came from, or why they left without buying.",
-    problem2Title:"AGENCIES HAVE NO\nUNIFIED TOOL.",
-    problem2Desc:"You manage 30 creators across 6 different platforms. No unified dashboard. No white-label. Your clients see \"Linktree\" branding — not yours.",
-    featuresEyebrow:"What Forge does differently",
-    featuresTitle1:"BUILT TO",featuresTitle2:"SELL,",featuresTitle3:"NOT SHARE.",
-    f1Title:"NATIVE STOREFRONT",f1Desc:"Sell digital products, presets, templates, and guides directly from your page. No third-party store needed. Payments go straight to you.",
-    f2Title:"ACTIONABLE ANALYTICS",f2Desc:"Not just click counts. Know where your visitors come from, which links convert to revenue, and what to optimize next. Data that drives decisions.",
-    f3Title:"BOOKING INTEGRATION",f3Desc:"Let visitors book a call, a session, or a consultation directly from your page. No back-and-forth DMs. Calendar synced. Payment collected.",
-    f4Title:"EMAIL CAPTURE",f4Desc:"Build your list without leaving the page. Every visitor is a potential subscriber. Your audience, owned by you — not rented from Instagram.",
-    f5Title:"MULTI-CURRENCY PAYMENTS",f5Desc:"Stripe for the West. Paystack for Africa. Local payment rails for emerging markets. The first link-in-bio platform that actually works everywhere.",
-    f6Title:"WHITE-LABEL READY",f6Desc:"Agencies: rebrand the entire platform as your own. Your logo, your domain, your colors. Your creators see your brand — not ours. Full admin dashboard included.",
-    compareEyebrow:"The honest comparison",compareTitle1:"FORGE VS",compareTitle2:"EVERYONE.",compareFeature:"Feature",
-    cmp1:"Link-in-bio page",cmp2:"Sell digital products",cmp3:"Booking integration",
-    cmp4:"Email capture built-in",cmp5:"Multi-currency payments",
-    cmp6:"White-label for agencies",cmp7:"Agency portfolio dashboard",cmp8:"Actionable analytics",
-    agenciesEyebrow:"For agencies",wlTitle1:"YOUR",wlTitle2:"BRAND.",wlTitle3:"NOT OURS.",
-    wlDesc:"Launch a fully branded link-in-bio platform for your creators in less than 24 hours. Your logo, your domain, your colors. Manage your entire portfolio from one dashboard.",
-    wlP1:"Custom domain — creators see your brand, not Forge",
-    wlP2:"3 management modes — Invite, Managed, Co-managed",
-    wlP3:"Portfolio analytics — see every creator's performance at once",
-    wlP4:"Revenue split — charge your creators what you want",
-    wlP5:"Starting at $79/month for up to 20 creators",
-    pricingEyebrow:"Simple pricing",pricingTitle1:"PAY FOR",pricingTitle2:"RESULTS,",pricingTitle3:"NOT LINKS.",
-    plan1Name:"Free",plan1Period:"forever",plan1F1:"5 links",plan1F2:"Basic analytics",plan1F3:"QR code",plan1Cta:"Get started free",
-    plan2Name:"Creator Pro",plan2Period:"/ month",plan2F1:"Unlimited links",plan2F2:"Sell digital products",plan2F3:"Booking integration",plan2F4:"Email capture",plan2F5:"Advanced analytics",plan2F6:"Custom domain",plan2Cta:"Join waitlist →",
-    plan3Name:"Agency",plan3Period:"/ month · up to 20 creators",plan3F1:"Everything in Creator Pro",plan3F2:"Full white-label",plan3F3:"Custom domain",plan3F4:"Portfolio dashboard",plan3F5:"3 management modes",plan3F6:"Priority support",plan3Cta:"Contact us →",
-    ctaTitle1:"READY TO",ctaTitle2:"FORGE",ctaTitle3:"YOURS ?",
-    ctaNote1:"Join",ctaNote2:"creators on the waitlist · Free forever plan available",
-    footerPrivacy:"Privacy",footerTerms:"Terms",placeholder:"your@email.com"
-  },
-  fr: {
-    badge:"Accès anticipé disponible",h1:"TRANSFORME TON",h2:"BIO EN",h3:"BUSINESS.",
-    sub:"La plateforme link-in-bio pour les créateurs qui vendent — et les agences qui ont besoin d'outils white-label qui fonctionnent vraiment. Fini les redirections. De vrais revenus.",
-    cta:"Commençons →",note:"Plan gratuit à vie · Sans carte bancaire · Lancement 2026",
-    navCta:"Rejoindre la liste →",navFeatures:"Fonctionnalités",navAgencies:"Agences",navPricing:"Tarifs",
-    counter:"créateurs déjà inscrits",scroll:"Défiler",
-    problemEyebrow:"Le problème",
-    problem1Title:"LINKTREE REDIRIGE.\nIL NE CONVERTIT PAS.",
-    problem1Desc:"Tu envoies 10 000 personnes sur ton Linktree. Elles cliquent et disparaissent. Tu ne sais pas qui elles étaient, d'où elles venaient, ni pourquoi elles sont parties sans acheter.",
-    problem2Title:"LES AGENCES N'ONT\nAUCUN OUTIL UNIFIÉ.",
-    problem2Desc:"Tu gères 30 créateurs sur 6 plateformes différentes. Pas de dashboard unifié. Pas de white-label. Tes clients voient la marque \"Linktree\" — pas la tienne.",
-    featuresEyebrow:"Ce que Forge fait différemment",
-    featuresTitle1:"CONÇU POUR",featuresTitle2:"VENDRE,",featuresTitle3:"PAS POUR PARTAGER.",
-    f1Title:"BOUTIQUE NATIVE",f1Desc:"Vends des produits digitaux, presets, templates et guides directement depuis ta page. Aucune boutique tierce. Les paiements vont directement chez toi.",
-    f2Title:"ANALYTICS ACTIONNABLES",f2Desc:"Pas que des compteurs. Sache d'où viennent tes visiteurs, quels liens convertissent en revenus, et quoi optimiser ensuite. Des données qui guident les décisions.",
-    f3Title:"RÉSERVATION INTÉGRÉE",f3Desc:"Laisse les visiteurs réserver un appel, une session ou une consultation directement depuis ta page. Calendrier synchronisé. Paiement collecté.",
-    f4Title:"CAPTURE D'EMAILS",f4Desc:"Construis ta liste sans quitter la page. Chaque visiteur est un abonné potentiel. Ton audience t'appartient — pas louée à Instagram.",
-    f5Title:"PAIEMENTS MULTIDEVISES",f5Desc:"Stripe pour l'Occident. Paystack pour l'Afrique. Solutions locales pour les marchés émergents. La première plateforme link-in-bio qui marche vraiment partout.",
-    f6Title:"WHITE-LABEL PRÊT",f6Desc:"Agences : rebrandez toute la plateforme à votre nom. Votre logo, votre domaine, vos couleurs. Vos créateurs voient votre marque — pas la nôtre.",
-    compareEyebrow:"La comparaison honnête",compareTitle1:"FORGE VS",compareTitle2:"TOUT LE MONDE.",compareFeature:"Fonctionnalité",
-    cmp1:"Page link-in-bio",cmp2:"Vendre des produits digitaux",cmp3:"Réservation intégrée",
-    cmp4:"Capture d'emails native",cmp5:"Paiements multidevises",
-    cmp6:"White-label pour agences",cmp7:"Dashboard portefeuille agence",cmp8:"Analytics actionnables",
-    agenciesEyebrow:"Pour les agences",wlTitle1:"VOTRE",wlTitle2:"MARQUE.",wlTitle3:"PAS LA NÔTRE.",
-    wlDesc:"Lancez une plateforme link-in-bio entièrement brandée pour vos créateurs en moins de 24h. Votre logo, votre domaine, vos couleurs. Gérez tout votre portefeuille depuis un seul dashboard.",
-    wlP1:"Domaine custom — vos créateurs voient votre marque, pas Forge",
-    wlP2:"3 modes de gestion — Invitation, Géré, Co-géré",
-    wlP3:"Analytics portefeuille — performance de chaque créateur en un coup d'œil",
-    wlP4:"Partage des revenus — facturez vos créateurs comme vous voulez",
-    wlP5:"À partir de 79$/mois pour jusqu'à 20 créateurs",
-    pricingEyebrow:"Tarification simple",pricingTitle1:"PAYEZ POUR",pricingTitle2:"LES RÉSULTATS,",pricingTitle3:"PAS LES LIENS.",
-    plan1Name:"Gratuit",plan1Period:"pour toujours",plan1F1:"5 liens",plan1F2:"Analytics basiques",plan1F3:"QR code",plan1Cta:"Commencer gratuitement",
-    plan2Name:"Creator Pro",plan2Period:"/ mois",plan2F1:"Liens illimités",plan2F2:"Vendre des produits digitaux",plan2F3:"Réservation intégrée",plan2F4:"Capture d'emails",plan2F5:"Analytics avancés",plan2F6:"Domaine personnalisé",plan2Cta:"Rejoindre la liste →",
-    plan3Name:"Agence",plan3Period:"/ mois · jusqu'à 20 créateurs",plan3F1:"Tout Creator Pro",plan3F2:"White-label complet",plan3F3:"Domaine personnalisé",plan3F4:"Dashboard portefeuille",plan3F5:"3 modes de gestion",plan3F6:"Support prioritaire",plan3Cta:"Nous contacter →",
-    ctaTitle1:"PRÊT À",ctaTitle2:"FORGER",ctaTitle3:"LE TIEN ?",
-    ctaNote1:"Rejoins",ctaNote2:"créateurs sur la liste · Plan gratuit disponible",
-    footerPrivacy:"Confidentialité",footerTerms:"CGU",placeholder:"ton@email.com"
-  },
-  ar: {
-    badge:"التسجيل المبكر متاح الآن",h1:"حوّل",h2:"بيو إلى",h3:"عمل حقيقي.",
-    sub:"منصة link-in-bio للمبدعين الذين يبيعون — والوكالات التي تحتاج إلى أدوات white-label تعمل فعلاً. لا إعادة توجيه. عائد حقيقي.",
-    cta:"لنبدأ ←",note:"خطة مجانية للأبد · بدون بطاقة بنكية · إطلاق 2026",
-    navCta:"انضم للقائمة ←",navFeatures:"المميزات",navAgencies:"الوكالات",navPricing:"الأسعار",
-    counter:"مبدع مسجل بالفعل",scroll:"اسحب",
-    problemEyebrow:"المشكلة",
-    problem1Title:"Linktree يُعيد التوجيه\nلكنه لا يحوّل.",
-    problem1Desc:"ترسل 10,000 شخص إلى Linktree. يضغطون على رابط ويختفون. لا تعرف من كانوا، من أين جاؤوا، أو لماذا غادروا دون شراء.",
-    problem2Title:"الوكالات ليس لها\nأداة موحدة.",
-    problem2Desc:"تدير 30 منشئ محتوى على 6 منصات. لا لوحة تحكم موحدة. لا white-label. عملاؤك يرون علامة Linktree — وليس علامتك.",
-    featuresEyebrow:"ما يفعله Forge بشكل مختلف",
-    featuresTitle1:"مصمم",featuresTitle2:"للبيع،",featuresTitle3:"لا للمشاركة فقط.",
-    f1Title:"متجر داخلي",f1Desc:"بِع المنتجات الرقمية والقوالب مباشرة من صفحتك. لا متاجر خارجية. المدفوعات تصل إليك مباشرة.",
-    f2Title:"تحليلات قابلة للتنفيذ",f2Desc:"ليس فقط عدد النقرات. اعرف من أين يأتي زوارك، وأي الروابط تحوّل إلى إيرادات. بيانات تقود القرارات.",
-    f3Title:"حجز المواعيد",f3Desc:"دع الزوار يحجزون مكالمة أو جلسة مباشرة من صفحتك. التقويم متزامن. الدفع محصّل.",
-    f4Title:"جمع الإيميلات",f4Desc:"ابنِ قائمتك دون مغادرة الصفحة. كل زائر هو مشترك محتمل. جمهورك ملكك — لا مستأجر من إنستغرام.",
-    f5Title:"مدفوعات متعددة العملات",f5Desc:"Stripe للغرب. Paystack لأفريقيا. حلول محلية للأسواق الناشئة. أول منصة link-in-bio تعمل فعلاً في كل مكان.",
-    f6Title:"جاهز للـ White-Label",f6Desc:"الوكالات: أعيدوا تسمية المنصة بالكامل باسمكم. شعاركم، نطاقكم، ألوانكم. منشئو المحتوى يرون علامتكم — لا علامتنا.",
-    compareEyebrow:"المقارنة الصادقة",compareTitle1:"Forge مقابل",compareTitle2:"الجميع.",compareFeature:"الميزة",
-    cmp1:"صفحة link-in-bio",cmp2:"بيع منتجات رقمية",cmp3:"حجز المواعيد",
-    cmp4:"جمع الإيميلات",cmp5:"مدفوعات متعددة العملات",
-    cmp6:"White-label للوكالات",cmp7:"لوحة تحكم محفظة الوكالة",cmp8:"تحليلات قابلة للتنفيذ",
-    agenciesEyebrow:"للوكالات",wlTitle1:"علامتكم",wlTitle2:"التجارية.",wlTitle3:"لا علامتنا.",
-    wlDesc:"أطلقوا منصة link-in-bio بعلامتكم التجارية الكاملة في أقل من 24 ساعة. شعاركم، نطاقكم، ألوانكم. أديروا كامل محفظتكم من لوحة تحكم واحدة.",
-    wlP1:"نطاق مخصص — منشئو المحتوى يرون علامتكم، لا Forge",
-    wlP2:"3 أوضاع إدارة — دعوة، مُدار، مُدار مشتركاً",
-    wlP3:"تحليلات المحفظة — أداء كل منشئ دفعة واحدة",
-    wlP4:"تقسيم الإيرادات — فاتر منشئيك كما تشاء",
-    wlP5:"ابتداءً من 79$/شهر لـ 20 منشئ محتوى",
-    pricingEyebrow:"تسعير بسيط",pricingTitle1:"ادفع مقابل",pricingTitle2:"النتائج،",pricingTitle3:"لا الروابط.",
-    plan1Name:"مجاني",plan1Period:"للأبد",plan1F1:"5 روابط",plan1F2:"تحليلات أساسية",plan1F3:"رمز QR",plan1Cta:"ابدأ مجاناً",
-    plan2Name:"Creator Pro",plan2Period:"/ شهر",plan2F1:"روابط غير محدودة",plan2F2:"بيع منتجات رقمية",plan2F3:"حجز مواعيد",plan2F4:"جمع الإيميلات",plan2F5:"تحليلات متقدمة",plan2F6:"نطاق مخصص",plan2Cta:"انضم للقائمة ←",
-    plan3Name:"وكالة",plan3Period:"/ شهر · حتى 20 منشئ",plan3F1:"كل ما في Creator Pro",plan3F2:"White-label كامل",plan3F3:"نطاق مخصص",plan3F4:"لوحة تحكم المحفظة",plan3F5:"3 أوضاع إدارة",plan3F6:"دعم ذو أولوية",plan3Cta:"تواصل معنا ←",
-    ctaTitle1:"مستعد",ctaTitle2:"لتبدأ",ctaTitle3:"مشروعك ؟",
-    ctaNote1:"انضم إلى",ctaNote2:"منشئ محتوى في القائمة · خطة مجانية متاحة",
-    footerPrivacy:"الخصوصية",footerTerms:"الشروط",placeholder:"بريدك@الإلكتروني.com"
-  }
+  en: {
+    badge:"Now accepting early access",h1:"TURN YOUR",h2:"BIO INTO",h3:"BUSINESS.",
+    sub:"The link-in-bio platform built for creators who sell — and agencies who need white-label tools that actually work. No redirects. Real revenue.",
+    cta:"Let's Forge →",note:"Free forever plan · No credit card · Launch early 2025",
+    navCta:"Join waitlist →",navFeatures:"Features",navAgencies:"Agencies",navPricing:"Pricing",
+    counter:"creators already on the list",scroll:"Scroll",
+    problemEyebrow:"The problem",
+    problem1Title:"LINKTREE REDIRECTS.\nIT DOESN'T CONVERT.",
+    problem1Desc:"You send 10,000 people to your Linktree. They click a link and disappear. You have no idea who they were, where they came from, or why they left without buying.",
+    problem2Title:"AGENCIES HAVE NO\nUNIFIED TOOL.",
+    problem2Desc:"You manage 30 creators across 6 different platforms. No unified dashboard. No white-label. Your clients see \"Linktree\" branding — not yours.",
+    featuresEyebrow:"What Forge does differently",
+    featuresTitle1:"BUILT TO",featuresTitle2:"SELL,",featuresTitle3:"NOT SHARE.",
+    f1Title:"NATIVE STOREFRONT",f1Desc:"Sell digital products, presets, templates, and guides directly from your page. No third-party store needed. Payments go straight to you.",
+    f2Title:"ACTIONABLE ANALYTICS",f2Desc:"Not just click counts. Know where your visitors come from, which links convert to revenue, and what to optimize next. Data that drives decisions.",
+    f3Title:"BOOKING INTEGRATION",f3Desc:"Let visitors book a call, a session, or a consultation directly from your page. No back-and-forth DMs. Calendar synced. Payment collected.",
+    f4Title:"EMAIL CAPTURE",f4Desc:"Build your list without leaving the page. Every visitor is a potential subscriber. Your audience, owned by you — not rented from Instagram.",
+    f5Title:"MULTI-CURRENCY PAYMENTS",f5Desc:"Stripe for the West. Paystack for Africa. Local payment rails for emerging markets. The first link-in-bio platform that actually works everywhere.",
+    f6Title:"WHITE-LABEL READY",f6Desc:"Agencies: rebrand the entire platform as your own. Your logo, your domain, your colors. Your creators see your brand — not ours. Full admin dashboard included.",
+    compareEyebrow:"The honest comparison",compareTitle1:"FORGE VS",compareTitle2:"EVERYONE.",compareFeature:"Feature",
+    cmp1:"Link-in-bio page",cmp2:"Sell digital products",cmp3:"Booking integration",
+    cmp4:"Email capture built-in",cmp5:"Multi-currency payments",
+    cmp6:"White-label for agencies",cmp7:"Agency portfolio dashboard",cmp8:"Actionable analytics",
+    agenciesEyebrow:"For agencies",wlTitle1:"YOUR",wlTitle2:"BRAND.",wlTitle3:"NOT OURS.",
+    wlDesc:"Launch a fully branded link-in-bio platform for your creators in less than 24 hours. Your logo, your domain, your colors. Manage your entire portfolio from one dashboard.",
+    wlP1:"Custom domain — creators see your brand, not Forge",
+    wlP2:"3 management modes — Invite, Managed, Co-managed",
+    wlP3:"Portfolio analytics — see every creator's performance at once",
+    wlP4:"Revenue split — charge your creators what you want",
+    wlP5:"Starting at $79/month for up to 20 creators",
+    pricingEyebrow:"Simple pricing",pricingTitle1:"PAY FOR",pricingTitle2:"RESULTS,",pricingTitle3:"NOT LINKS.",
+    plan1Name:"Free",plan1Period:"forever",plan1F1:"5 links",plan1F2:"Basic analytics",plan1F3:"QR code",plan1Cta:"Get started free",
+    plan2Name:"Creator Pro",plan2Period:"/ month",plan2F1:"Unlimited links",plan2F2:"Sell digital products",plan2F3:"Booking integration",plan2F4:"Email capture",plan2F5:"Advanced analytics",plan2F6:"Custom domain",plan2Cta:"Join waitlist →",
+    plan3Name:"Agency",plan3Period:"/ month · up to 20 creators",plan3F1:"Everything in Creator Pro",plan3F2:"Full white-label",plan3F3:"Custom domain",plan3F4:"Portfolio dashboard",plan3F5:"3 management modes",plan3F6:"Priority support",plan3Cta:"Contact us →",
+    ctaTitle1:"READY TO",ctaTitle2:"FORGE",ctaTitle3:"YOURS ?",
+    ctaNote1:"Join",ctaNote2:"creators on the waitlist · Free forever plan available",
+    footerPrivacy:"Privacy",footerTerms:"Terms",placeholder:"your@email.com"
+  },
+  fr: {
+    badge:"Accès anticipé disponible",h1:"TRANSFORME TON",h2:"BIO EN",h3:"BUSINESS.",
+    sub:"La plateforme link-in-bio pour les créateurs qui vendent — et les agences qui ont besoin d'outils white-label qui fonctionnent vraiment. Fini les redirections. De vrais revenus.",
+    cta:"Commençons →",note:"Plan gratuit à vie · Sans carte bancaire · Lancement 2025",
+    navCta:"Rejoindre la liste →",navFeatures:"Fonctionnalités",navAgencies:"Agences",navPricing:"Tarifs",
+    counter:"créateurs déjà inscrits",scroll:"Défiler",
+    problemEyebrow:"Le problème",
+    problem1Title:"LINKTREE REDIRIGE.\nIL NE CONVERTIT PAS.",
+    problem1Desc:"Tu envoies 10 000 personnes sur ton Linktree. Elles cliquent et disparaissent. Tu ne sais pas qui elles étaient, d'où elles venaient, ni pourquoi elles sont parties sans acheter.",
+    problem2Title:"LES AGENCES N'ONT\nAUCUN OUTIL UNIFIÉ.",
+    problem2Desc:"Tu gères 30 créateurs sur 6 plateformes différentes. Pas de dashboard unifié. Pas de white-label. Tes clients voient la marque \"Linktree\" — pas la tienne.",
+    featuresEyebrow:"Ce que Forge fait différemment",
+    featuresTitle1:"CONÇU POUR",featuresTitle2:"VENDRE,",featuresTitle3:"PAS PARTAGER.",
+    f1Title:"BOUTIQUE NATIVE",f1Desc:"Vends des produits digitaux, presets, templates et guides directement depuis ta page. Aucune boutique tierce. Les paiements vont directement chez toi.",
+    f2Title:"ANALYTICS ACTIONNABLES",f2Desc:"Pas que des compteurs. Sache d'où viennent tes visiteurs, quels liens convertissent en revenus, et quoi optimiser ensuite. Des données qui guident les décisions.",
+    f3Title:"RÉSERVATION INTÉGRÉE",f3Desc:"Laisse les visiteurs réserver un appel, une session ou une consultation directement depuis ta page. Calendrier synchronisé. Paiement collecté.",
+    f4Title:"CAPTURE D'EMAILS",f4Desc:"Construis ta liste sans quitter la page. Chaque visiteur est un abonné potentiel. Ton audience t'appartient — pas louée à Instagram.",
+    f5Title:"PAIEMENTS MULTIDEVISES",f5Desc:"Stripe pour l'Occident. Paystack pour l'Afrique. Solutions locales pour les marchés émergents. La première plateforme link-in-bio qui marche vraiment partout.",
+    f6Title:"WHITE-LABEL PRÊT",f6Desc:"Agences : rebrandez toute la plateforme à votre nom. Votre logo, votre domaine, vos couleurs. Vos créateurs voient votre marque — pas la nôtre.",
+    compareEyebrow:"La comparaison honnête",compareTitle1:"FORGE VS",compareTitle2:"TOUT LE MONDE.",compareFeature:"Fonctionnalité",
+    cmp1:"Page link-in-bio",cmp2:"Vendre des produits digitaux",cmp3:"Réservation intégrée",
+    cmp4:"Capture d'emails native",cmp5:"Paiements multidevises",
+    cmp6:"White-label pour agences",cmp7:"Dashboard portefeuille agence",cmp8:"Analytics actionnables",
+    agenciesEyebrow:"Pour les agences",wlTitle1:"VOTRE",wlTitle2:"MARQUE.",wlTitle3:"PAS LA NÔTRE.",
+    wlDesc:"Lancez une plateforme link-in-bio entièrement brandée pour vos créateurs en moins de 24h. Votre logo, votre domaine, vos couleurs. Gérez tout votre portefeuille depuis un seul dashboard.",
+    wlP1:"Domaine custom — vos créateurs voient votre marque, pas Forge",
+    wlP2:"3 modes de gestion — Invitation, Géré, Co-géré",
+    wlP3:"Analytics portefeuille — performance de chaque créateur en un coup d'œil",
+    wlP4:"Partage des revenus — facturez vos créateurs comme vous voulez",
+    wlP5:"À partir de 79$/mois pour jusqu'à 20 créateurs",
+    pricingEyebrow:"Tarification simple",pricingTitle1:"PAYEZ POUR",pricingTitle2:"LES RÉSULTATS,",pricingTitle3:"PAS LES LIENS.",
+    plan1Name:"Gratuit",plan1Period:"pour toujours",plan1F1:"5 liens",plan1F2:"Analytics basiques",plan1F3:"QR code",plan1Cta:"Commencer gratuitement",
+    plan2Name:"Creator Pro",plan2Period:"/ mois",plan2F1:"Liens illimités",plan2F2:"Vendre des produits digitaux",plan2F3:"Réservation intégrée",plan2F4:"Capture d'emails",plan2F5:"Analytics avancés",plan2F6:"Domaine personnalisé",plan2Cta:"Rejoindre la liste →",
+    plan3Name:"Agence",plan3Period:"/ mois · jusqu'à 20 créateurs",plan3F1:"Tout Creator Pro",plan3F2:"White-label complet",plan3F3:"Domaine personnalisé",plan3F4:"Dashboard portefeuille",plan3F5:"3 modes de gestion",plan3F6:"Support prioritaire",plan3Cta:"Nous contacter →",
+    ctaTitle1:"PRÊT À",ctaTitle2:"FORGER",ctaTitle3:"LE TIEN ?",
+    ctaNote1:"Rejoins",ctaNote2:"créateurs sur la liste · Plan gratuit disponible",
+    footerPrivacy:"Confidentialité",footerTerms:"CGU",placeholder:"ton@email.com"
+  },
+  ar: {
+    badge:"التسجيل المبكر متاح الآن",h1:"حوّل",h2:"بيو إلى",h3:"عمل حقيقي.",
+    sub:"منصة link-in-bio للمبدعين الذين يبيعون — والوكالات التي تحتاج إلى أدوات white-label تعمل فعلاً. لا إعادة توجيه. عائد حقيقي.",
+    cta:"لنبدأ ←",note:"خطة مجانية للأبد · بدون بطاقة بنكية · إطلاق 2025",
+    navCta:"انضم للقائمة ←",navFeatures:"المميزات",navAgencies:"الوكالات",navPricing:"الأسعار",
+    counter:"مبدع مسجل بالفعل",scroll:"اسحب",
+    problemEyebrow:"المشكلة",
+    problem1Title:"Linktree يُعيد التوجيه\nلكنه لا يحوّل.",
+    problem1Desc:"ترسل 10,000 شخص إلى Linktree. يضغطون على رابط ويختفون. لا تعرف من كانوا، من أين جاؤوا، أو لماذا غادروا دون شراء.",
+    problem2Title:"الوكالات ليس لها\nأداة موحدة.",
+    problem2Desc:"تدير 30 منشئ محتوى على 6 منصات. لا لوحة تحكم موحدة. لا white-label. عملاؤك يرون علامة Linktree — وليس علامتك.",
+    featuresEyebrow:"ما يفعله Forge بشكل مختلف",
+    featuresTitle1:"مصمم",featuresTitle2:"للبيع،",featuresTitle3:"لا للمشاركة فقط.",
+    f1Title:"متجر داخلي",f1Desc:"بِع المنتجات الرقمية والقوالب مباشرة من صفحتك. لا متاجر خارجية. المدفوعات تصل إليك مباشرة.",
+    f2Title:"تحليلات قابلة للتنفيذ",f2Desc:"ليس فقط عدد النقرات. اعرف من أين يأتي زوارك، وأي الروابط تحوّل إلى إيرادات. بيانات تقود القرارات.",
+    f3Title:"حجز المواعيد",f3Desc:"دع الزوار يحجزون مكالمة أو جلسة مباشرة من صفحتك. التقويم متزامن. الدفع محصّل.",
+    f4Title:"جمع الإيميلات",f4Desc:"ابنِ قائمتك دون مغادرة الصفحة. كل زائر هو مشترك محتمل. جمهورك ملكك — لا مستأجر من إنستغرام.",
+    f5Title:"مدفوعات متعددة العملات",f5Desc:"Stripe للغرب. Paystack لأفريقيا. حلول محلية للأسواق الناشئة. أول منصة link-in-bio تعمل فعلاً في كل مكان.",
+    f6Title:"جاهز للـ White-Label",f6Desc:"الوكالات: أعيدوا تسمية المنصة بالكامل باسمكم. شعاركم، نطاقكم، ألوانكم. منشئو المحتوى يرون علامتكم — لا علامتنا.",
+    compareEyebrow:"المقارنة الصادقة",compareTitle1:"Forge مقابل",compareTitle2:"الجميع.",compareFeature:"الميزة",
+    cmp1:"صفحة link-in-bio",cmp2:"بيع منتجات رقمية",cmp3:"حجز المواعيد",
+    cmp4:"جمع الإيميلات",cmp5:"مدفوعات متعددة العملات",
+    cmp6:"White-label للوكالات",cmp7:"لوحة تحكم محفظة الوكالة",cmp8:"تحليلات قابلة للتنفيذ",
+    agenciesEyebrow:"للوكالات",wlTitle1:"علامتكم",wlTitle2:"التجارية.",wlTitle3:"لا علامتنا.",
+    wlDesc:"أطلقوا منصة link-in-bio بعلامتكم التجارية الكاملة في أقل من 24 ساعة. شعاركم، نطاقكم، ألوانكم. أديروا كامل محفظتكم من لوحة تحكم واحدة.",
+    wlP1:"نطاق مخصص — منشئو المحتوى يرون علامتكم، لا Forge",
+    wlP2:"3 أوضاع إدارة — دعوة، مُدار، مُدار مشتركاً",
+    wlP3:"تحليلات المحفظة — أداء كل منشئ دفعة واحدة",
+    wlP4:"تقسيم الإيرادات — فاتر منشئيك كما تشاء",
+    wlP5:"ابتداءً من 79$/شهر لـ 20 منشئ محتوى",
+    pricingEyebrow:"تسعير بسيط",pricingTitle1:"ادفع مقابل",pricingTitle2:"النتائج،",pricingTitle3:"لا الروابط.",
+    plan1Name:"مجاني",plan1Period:"للأبد",plan1F1:"5 روابط",plan1F2:"تحليلات أساسية",plan1F3:"رمز QR",plan1Cta:"ابدأ مجاناً",
+    plan2Name:"Creator Pro",plan2Period:"/ شهر",plan2F1:"روابط غير محدودة",plan2F2:"بيع منتجات رقمية",plan2F3:"حجز مواعيد",plan2F4:"جمع الإيميلات",plan2F5:"تحليلات متقدمة",plan2F6:"نطاق مخصص",plan2Cta:"انضم للقائمة ←",
+    plan3Name:"وكالة",plan3Period:"/ شهر · حتى 20 منشئ",plan3F1:"كل ما في Creator Pro",plan3F2:"White-label كامل",plan3F3:"نطاق مخصص",plan3F4:"لوحة تحكم المحفظة",plan3F5:"3 أوضاع إدارة",plan3F6:"دعم ذو أولوية",plan3Cta:"تواصل معنا ←",
+    ctaTitle1:"مستعد",ctaTitle2:"لتبدأ",ctaTitle3:"مشروعك ؟",
+    ctaNote1:"انضم إلى",ctaNote2:"منشئ محتوى في القائمة · خطة مجانية متاحة",
+    footerPrivacy:"الخصوصية",footerTerms:"الشروط",placeholder:"بريدك@الإلكتروني.com"
+  }
 }
 
 let currentLang = 'en'
 
 function switchLang(lang) {
-  currentLang = lang
-  const t = translations[lang]
-  document.documentElement.dir  = lang === 'ar' ? 'rtl' : 'ltr'
-  document.documentElement.lang = lang
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n')
-    if (t[key] !== undefined) el.textContent = t[key]
-  })
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    const key = el.getAttribute('data-i18n-placeholder')
-    if (t[key]) el.placeholder = t[key]
-  })
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    const match = lang === 'ar' ? 'ع' : lang.toUpperCase()
-    btn.classList.toggle('active', btn.textContent.trim() === match)
-  })
+  currentLang = lang
+  const t = translations[lang]
+  document.documentElement.dir  = lang === 'ar' ? 'rtl' : 'ltr'
+  document.documentElement.lang = lang
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n')
+    if (t[key] !== undefined) el.textContent = t[key]
+  })
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder')
+    if (t[key]) el.placeholder = t[key]
+  })
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    const match = lang === 'ar' ? 'ع' : lang.toUpperCase()
+    btn.classList.toggle('active', btn.textContent.trim() === match)
+  })
 }
 
 // Custom cursor
@@ -618,51 +615,47 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
 // Counter
 let count=247
 function animateCounter(){
-  count+=Math.floor(Math.random()*3)
-  const c1=document.getElementById('waitlistCount')
-  const c2=document.getElementById('waitlistCount2')
-  if(c1)c1.textContent=count.toLocaleString()
-  if(c2)c2.textContent=count.toLocaleString()
-  setTimeout(animateCounter,Math.random()*8000+4000)
+  count+=Math.floor(Math.random()*3)
+  const c1=document.getElementById('waitlistCount')
+  const c2=document.getElementById('waitlistCount2')
+  if(c1)c1.textContent=count.toLocaleString()
+  if(c2)c2.textContent=count.toLocaleString()
+  setTimeout(animateCounter,Math.random()*8000+4000)
 }
 setTimeout(animateCounter,3000)
 
 // Submit hero
 async function submitWaitlist(){
-  const email=document.getElementById('emailInput').value
-  const btn=document.getElementById('waitlistBtn')
-  if(!email||!email.includes('@')){document.getElementById('emailInput').style.borderColor='rgba(248,113,113,0.6)';setTimeout(()=>document.getElementById('emailInput').style.borderColor='',2000);return}
-  btn.textContent='...'
-  btn.style.opacity='0.7'
-  btn.style.pointerEvents='none'
-  try{
-    const res=await fetch('https://formspree.io/f/mbdzvadl',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email,source:'hero-form',lang:currentLang,page:'letsforge.me'})})
-    if(res.ok){btn.textContent='✓';btn.classList.add('success');document.getElementById('emailInput').value='';count++;document.getElementById('waitlistCount').textContent=count.toLocaleString();document.getElementById('waitlistCount2').textContent=count.toLocaleString();}
-    else throw new Error()
-  }catch{btn.textContent=currentLang==='ar'?'حاول مجدداً':currentLang==='fr'?'Réessayer →':'Try again →';btn.style.opacity='1';btn.style.pointerEvents='auto'}
+  const email=document.getElementById('emailInput').value
+  const btn=document.getElementById('waitlistBtn')
+  if(!email||!email.includes('@')){document.getElementById('emailInput').style.borderColor='rgba(248,113,113,0.6)';setTimeout(()=>document.getElementById('emailInput').style.borderColor='',2000);return}
+  btn.textContent='...'
+  btn.style.opacity='0.7'
+  btn.style.pointerEvents='none'
+  try{
+    const res=await fetch('https://formspree.io/f/mbdzvadl',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email,source:'hero-form',lang:currentLang,page:'letsforge.me'})})
+    if(res.ok){btn.textContent='✓';btn.classList.add('success');document.getElementById('emailInput').value='';count++;document.getElementById('waitlistCount').textContent=count.toLocaleString();document.getElementById('waitlistCount2').textContent=count.toLocaleString();}
+    else throw new Error()
+  }catch{btn.textContent=currentLang==='ar'?'حاول مجدداً':currentLang==='fr'?'Réessayer →':'Try again →';btn.style.opacity='1';btn.style.pointerEvents='auto'}
 }
 
 // Submit CTA
 async function submitWaitlist2(){
-  const email=document.getElementById('emailInput2').value
-  const btn=document.getElementById('waitlistBtn2')
-  if(!email||!email.includes('@')){document.getElementById('emailInput2').style.borderColor='rgba(248,113,113,0.6)';setTimeout(()=>document.getElementById('emailInput2').style.borderColor='',2000);return}
-  btn.textContent='...'
-  btn.style.opacity='0.7'
-  btn.style.pointerEvents='none'
-  try{
-    const res=await fetch('https://formspree.io/f/mbdzvadl',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email,source:'cta-form',lang:currentLang,page:'letsforge.me'})})
-    if(res.ok){btn.textContent='✓';btn.classList.add('success');document.getElementById('emailInput2').value='';}
-    else throw new Error()
-  }catch{btn.textContent=currentLang==='ar'?'حاول مجدداً':currentLang==='fr'?'Réessayer →':'Try again →';btn.style.opacity='1';btn.style.pointerEvents='auto'}
+  const email=document.getElementById('emailInput2').value
+  const btn=document.getElementById('waitlistBtn2')
+  if(!email||!email.includes('@')){document.getElementById('emailInput2').style.borderColor='rgba(248,113,113,0.6)';setTimeout(()=>document.getElementById('emailInput2').style.borderColor='',2000);return}
+  btn.textContent='...'
+  btn.style.opacity='0.7'
+  btn.style.pointerEvents='none'
+  try{
+    const res=await fetch('https://formspree.io/f/mbdzvadl',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email,source:'cta-form',lang:currentLang,page:'letsforge.me'})})
+    if(res.ok){btn.textContent='✓';btn.classList.add('success');document.getElementById('emailInput2').value='';}
+    else throw new Error()
+  }catch{btn.textContent=currentLang==='ar'?'حاول مجدداً':currentLang==='fr'?'Réessayer →':'Try again →';btn.style.opacity='1';btn.style.pointerEvents='auto'}
 }
 
 document.getElementById('emailInput').addEventListener('keydown',e=>{if(e.key==='Enter')submitWaitlist()})
 document.getElementById('emailInput2').addEventListener('keydown',e=>{if(e.key==='Enter')submitWaitlist2()})
 
 // Scroll reveal
-const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:0.12})
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))
-</script>
-</body>
-   </html>
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');obs
