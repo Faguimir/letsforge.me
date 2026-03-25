@@ -212,9 +212,9 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;align-i
     <li><a href="#pricing" data-i18n="navPricing">Pricing</a></li>
   </ul>
   <div class="lang-toggle">
-    <button class="lang-btn active" onclick="switchLang('en')">EN</button>
-    <button class="lang-btn" onclick="switchLang('fr')">FR</button>
-    <button class="lang-btn" onclick="switchLang('ar')">ع</button>
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="ar">ع</button>
   </div>
   <a href="#waitlist" class="nav-cta" data-i18n="navCta">Join waitlist →</a>
 </nav>
@@ -235,7 +235,7 @@ footer{border-top:1px solid var(--border);padding:40px 60px;display:flex;align-i
   <p class="hero-sub" data-i18n="sub">The link-in-bio platform built for creators who sell — and agencies who need white-label tools that actually work. No redirects. Real revenue.</p>
   <div class="waitlist-form">
     <input class="waitlist-input" type="email" placeholder="your@email.com" id="emailInput" data-i18n-placeholder="placeholder">
-    <button class="waitlist-btn" id="waitlistBtn" onclick="submitWaitlist()">
+    <button class="waitlist-btn" id="waitlistBtn">
       <span data-i18n="cta">Let's Forge →</span>
     </button>
   </div>
@@ -434,7 +434,7 @@ UNIFIED TOOL.</div>
   </div>
   <div class="cta-form reveal">
     <input class="waitlist-input" type="email" placeholder="your@email.com" id="emailInput2" data-i18n-placeholder="placeholder">
-    <button class="waitlist-btn" id="waitlistBtn2" onclick="submitWaitlist2()">
+    <button class="waitlist-btn" id="waitlistBtn">
       <span data-i18n="cta">Let's Forge →</span>
     </button>
   </div>
@@ -580,6 +580,22 @@ const translations = {
 }
 
 let currentLang = 'en'
+// Attache les événements après chargement du DOM
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Boutons de langue
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      switchLang(this.getAttribute('data-lang'))
+    })
+  })
+
+  // Boutons waitlist
+  document.getElementById('waitlistBtn').addEventListener('click', submitWaitlist)
+  document.getElementById('waitlistBtn2').addEventListener('click', submitWaitlist2)
+
+  // Enter key
+  })
 
 function switchLang(lang) {
   currentLang = lang
